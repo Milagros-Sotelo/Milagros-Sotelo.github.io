@@ -20,7 +20,7 @@ jobs:
           mkdir unpacked
           tar -xzf portfolio-source.tar.gz -C unpacked
           cp -a unpacked/. .
-          rm -rf unpacked portfolio-source.tar.gz .github/workflows/bootstrap.yml
+          rm -rf unpacked portfolio-source.tar.gz .github/workflows/bootstrap.yml .github/workflows/deploy-pages.yml
 
       - name: Publish source files
         run: |
