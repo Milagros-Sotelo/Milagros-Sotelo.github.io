@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const programmingFont = IBM_Plex_Mono({
+  variable: "--font-programming",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 const siteUrl = "https://milagros-sotelo.github.io";
 
@@ -35,7 +38,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body className={programmingFont.variable}>{children}</body>
     </html>
   );
 }
