@@ -1,28 +1,27 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { projects } from "../portfolio-config";
 import type { PortfolioProject } from "../portfolio-config";
 
-function ProjectBrand({ project, large = false }: { project: PortfolioProject; large?: boolean }) {
+const projectCoverImages: Record<PortfolioProject["tone"], string> = {
+  payflow: "/project-covers/payflow.png",
+  growth: "/project-covers/growthsignal.png",
+  reportmind: "/project-covers/reportmind-ai.png",
+};
+
+function ProjectCoverImage({ project, large = false }: { project: PortfolioProject; large?: boolean }) {
   return (
-    <div className={`marketing-brand ${project.tone}${large ? " marketing-brand-large" : ""}`}>
-      <span className="marketing-mark" aria-hidden="true">
-        {project.tone === "payflow" ? (
-          <span className="payflow-symbol"><i /><i /><i /></span>
-        ) : null}
-        {project.tone === "growth" ? (
-          <span className="growth-symbol"><i /><i /><i /><b /></span>
-        ) : null}
-        {project.tone === "reportmind" ? (
-          <span className="reportmind-symbol"><i /><i /><i /><b /></span>
-        ) : null}
-      </span>
-      <span className="marketing-wordmark">
-        <strong>{project.nameLead}<em>{project.nameAccent}</em></strong>
-        <small>{project.subtitle}</small>
-      </span>
-    </div>
+    <Image
+      src={projectCoverImages[project.tone]}
+      alt={`${project.name} project logo`}
+      width={1255}
+      height={1255}
+      sizes={large ? "(max-width: 700px) 100vw, 1060px" : "(max-width: 900px) 100vw, 390px"}
+      className={`project-cover-image${large ? " project-cover-image-large" : ""}`}
+      unoptimized
+    />
   );
 }
 
@@ -67,10 +66,7 @@ export function Projects() {
               aria-label={`Open ${project.name} project overview`}
             >
               <div className={`copy-project-cover ${project.tone}`}>
-                <ProjectBrand project={project} />
-                <div className="copy-cover-tools" aria-hidden="true">
-                  <span>{project.mark}</span><i /><i /><i />
-                </div>
+                <ProjectCoverImage project={project} />
               </div>
 
               <div className="copy-project-body">
@@ -97,7 +93,7 @@ export function Projects() {
           >
             <button className="project-modal-close" type="button" onClick={() => setSelected(null)} autoFocus aria-label="Close project overview">×</button>
             <div className={`project-modal-cover ${selected.tone}`}>
-              <ProjectBrand project={selected} large />
+              <ProjectCoverImage project={selected} large />
               <div className="project-modal-techline" aria-hidden="true">
                 {selected.stack.slice(0, 4).map((item) => <span key={item}>{item}</span>)}
               </div>
