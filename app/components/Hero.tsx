@@ -6,7 +6,7 @@ export function Hero() {
     <section className="copy-hero" id="home">
       <div className="shell copy-hero-container">
         <div className="copy-hero-content">
-          <p className="copy-hero-badge"><span aria-hidden="true">👋</span> Hi, I&apos;m</p>
+          <p className="copy-hero-badge"><span aria-hidden="true">👋</span> Welcome to my portfolio</p>
           <h1>Milagros Sotelo</h1>
           <h2>Finance, Data &amp; Business Intelligence Analyst</h2>
           <p className="copy-hero-description">
@@ -59,12 +59,12 @@ export function Hero() {
 
           <div className="copy-code-display" aria-label="Professional profile summary">
             <div className="copy-code-header"><i /><i /><i /><span>profile.ts</span></div>
-            <pre><code><span className="code-line"><span className="code-keyword">const</span> <span className="code-variable">professionalProfile</span> = {"{"}</span><span className="code-line">  <span className="code-property">name</span>: <span className="code-string">&quot;Milagros Sotelo&quot;</span>,</span><span className="code-line">  <span className="code-property">location</span>: <span className="code-string">&quot;🌎 Buenos Aires, Argentina&quot;</span>,</span><span className="code-line">  <span className="code-property">role</span>: <span className="code-string">&quot;Finance, Data &amp; BI Analyst&quot;</span>,</span><span className="code-line">  <span className="code-property">toolkit</span>: [<span className="code-string">&quot;SQL&quot;</span>, <span className="code-string">&quot;Python&quot;</span>, <span className="code-string">&quot;Power BI&quot;</span>],</span><span className="code-line">  <span className="code-property">strengths</span>: [<span className="code-string">&quot;analysis&quot;</span>, <span className="code-string">&quot;business&quot;</span>, <span className="code-string">&quot;clarity&quot;</span>],</span><span className="code-line">  <span className="code-property">status</span>: <span className="code-status">&quot;Open to opportunities&quot;</span></span><span className="code-line">{"};"}</span></code></pre>
+            <pre><code><span className="code-line"><span className="code-keyword">const</span> <span className="code-variable">professionalProfile</span> = {"{"}</span><span className="code-line">  <span className="code-property">name</span>: <span className="code-string">&quot;Milagros Sotelo&quot;</span>,</span><span className="code-line">  <span className="code-property">location</span>: <span className="code-string">&quot;🌎 Buenos Aires, Argentina&quot;</span>,</span><span className="code-line">  <span className="code-property">role</span>: <span className="code-string">&quot;Finance, Data &amp; BI Analyst&quot;</span>,</span><span className="code-line">  <span className="code-property">toolkit</span>: [<span className="code-string">&quot;SQL&quot;</span>, <span className="code-string">&quot;Python&quot;</span>, <span className="code-string">&quot;Power BI&quot;</span>],</span><span className="code-line">  <span className="code-property">strengths</span>: [<span className="code-string">&quot;analysis&quot;</span>, <span className="code-string">&quot;business&quot;</span>, <span className="code-string">&quot;clarity&quot;</span>],</span><span className="code-line">  <span className="code-property">status</span>: <span className="code-status">&quot;Ready to create measurable impact&quot;</span></span><span className="code-line">{"};"}</span></code></pre>
           </div>
 
           <div className="copy-floating-card">
             <span className="copy-status-icon" aria-hidden="true">💻</span>
-            <p><small>Current status</small>Open to full-time opportunities</p>
+            <p><small>Professional focus</small>Ready to turn data into business impact</p>
             <i className="copy-status-signal" aria-hidden="true" />
           </div>
         </div>
